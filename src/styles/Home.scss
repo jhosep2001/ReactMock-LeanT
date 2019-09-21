@@ -1,0 +1,73 @@
+@import "shared";
+
+.home-container {
+  width: 100%;
+  top: #{$navBarHeight};
+  position: relative;
+  height: calc(80% - #{$navBarHeight});
+}
+
+.delivers-container {
+  display: inline-block;
+  float: right;
+  width: 80%;
+  overflow: auto;
+  height: 90%;
+}
+
+.delivers-options-container {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+
+.delivers-options-container .input-container {
+  width: 45%;
+  display: inline-block;
+  float: right;
+  margin-right: 45px;
+}
+
+.checkAll {
+  height: $checkButtonHeight;
+  width: $checkButtonWidth;
+  display: inline-block;
+  background-image: url($checkedOff);
+  background-repeat: no-repeat;
+  background-size: $checkButtonWidth $checkButtonHeight;
+  float: left;
+  top: 20%;
+  left: 50px;
+  position: relative;
+  cursor: pointer;
+
+  &.active {
+    background-image: url($checkedOn);
+  }
+
+}
+
+.add-button {
+  width: $floatButtonWidth;
+  height: $floatButtonHeight;
+  font-weight: bold;
+  font-size: 7em;
+  color: white;
+  background-color: $orangeColor;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50px;
+  right: 40px;
+  text-align: center;
+  line-height: 70%;
+  cursor: pointer;
+
+  &:hover {
+    transition: background-color 0.5s;
+    background-color: darken($orangeColor, 10%);
+  }
+
+  &::after {
+    content: "+";
+  }
+}

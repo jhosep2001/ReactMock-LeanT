@@ -1,0 +1,80 @@
+$mainBackgroundColor: rgb(238,238,238);
+$secondaryBackgroundColor: rgb(230,230,230);
+$whiteColor: rgb(255,255,255);
+$redColor: rgb(254,62,71);
+$orangeColor: rgb(250,138,0);
+$darkBlueColor: rgb(15,57,74);
+$grayColor: rgb(110,110,110);
+
+$logoWidth: 130px;
+$logoHeight: 130px;
+
+$floatButtonWidth: 100px;
+$floatButtonHeight: 100px;
+
+$checkButtonWidth: 60px;
+$checkButtonHeight: 60px;
+
+$sideBarWidth: 20%;
+
+$navBarTopSpace: 30px;
+$navBarHeight: 70px;
+
+$mainMargin: 25px;
+$rightMargin: 50px;
+
+$homeText: "Home";
+$messageText: "Message";
+$wishlistText: "Wishlist";
+$settingText: "Settings";
+$accountText: "My Account";
+$filtersText: "Smart Filters";
+$statusText: "Status";
+$searchText: "Status";
+$deliveredText: "delivered";
+
+$navBarIconSize: 30px;
+
+$logo: "icons/logo.png";
+$calendarOn: "icons/calendar-on.png";
+$calendarOff: "icons/calendar-off.png";
+$checkedOff: "icons/checked-off.png";
+$checkedOn: "icons/checked-on.png";
+$configOff: "icons/config-off.png";
+$configOn: "icons/config-on.png";
+$deliveryOff: "icons/delivery-off.png";
+$heartOn: "icons/heart-on.png";
+$heartOff: "icons/heart-off.png";
+$messageOn: "icons/message-on.png";
+$messageOff: "icons/message-off.png";
+$homeOn: "icons/home-on.png";
+$homeOff: "icons/home-off.png";
+$ideaOn: "icons/idea-on.png";
+$ideaOff: "icons/idea-off.png";
+$saleOn: "icons/sale-on.png";
+$saleOff: "icons/sale-off.png";
+$starOn: "icons/star-on.png";
+$starOff: "icons/star-off.png";
+$userOn: "icons/user-on.png";
+$userOff: "icons/user-off.png";
+$search: "icons/search.png";
+$arrowOn: "icons/arrow-on.png";
+$menuDots: "icons/menu.png";
+$navigationOff: "icons/navigation-off.png";
+
+
+.search-input {
+  background-color: $whiteColor !important;
+  background-image: url($search);
+  background-position: 30% center;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 5rem !important;
+  border-radius: 10px !important;
+
+  &:focus {
+    border-bottom: 1px solid $orangeColor !important;
+    box-shadow: 0 1px 0 0 $orangeColor !important;
+  }
+}

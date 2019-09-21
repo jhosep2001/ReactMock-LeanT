@@ -1,0 +1,134 @@
+@import "shared";
+
+.deliveryItem-Container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.delivery-data-container {
+  display: flex;
+  background-color: white;
+  margin: 10px 20px 10px 80px;
+  border-radius: 40px;
+  min-height: 130px;
+  width: calc(100% - (#{$checkButtonWidth} + 50px));
+  cursor: pointer;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    color: $grayColor;
+  }
+
+  .delivery-date {
+    display: flex;
+    align-items: center;
+    width: 14%;
+    padding-right: 20px;
+    margin: 20px 0 20px 40px;
+    border-right: 1px solid $grayColor;
+    font-size: 1.3em;
+  }
+
+  .delivery-route {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    margin: 10px 5px 10px 40px;
+    box-sizing: border-box;
+    border-right: 1px solid $grayColor;
+    font-size: 1.3em;
+
+    .delivery-route-icons {
+      height: 50px;
+
+      .navigation-icon {
+        height: 50px;
+        position: relative;
+        width: 50px;
+        right: 100%;
+        display: inline-block;
+        background-image: url($navigationOff);
+        background-size: 40px 40px;
+        background-repeat: no-repeat;
+      }
+
+      .arrow-icon {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        background-image: url($arrowOn);
+        background-size: 50px 50px;
+        background-repeat: no-repeat;
+        position: relative;
+        right: 25%;
+      }
+    }
+
+  }
+
+  .truck {
+    width: 80px;
+    margin: 0 50px;
+    background-image: url($deliveryOff);
+    background-size: 75px 75px;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+  }
+
+  .delivery-value {
+    font-size: 2.5em;
+    font-weight: 200;
+    color: $grayColor;
+
+    &::before {
+      content: "$"
+    }
+  }
+
+  .option-square {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background-color: #fe3e47;
+    color: white;
+    border-radius: 5px;
+    justify-content: center;
+    font-weight: bold;
+
+    &::after {
+      content: "1";
+    }
+  }
+
+  .options-points {
+    width: 50px;
+    background-image: url($menuDots);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 20px;
+  }
+
+}
+
+.checkDelivery {
+    display: inline-block;
+    height: #{$checkButtonHeight+5px};
+    width: #{$checkButtonWidth+5px};
+    background-image: url($checkedOff);
+    background-repeat: no-repeat;
+    background-size: $checkButtonWidth $checkButtonHeight;
+    float: left;
+    top: 20%;
+    left: 50px;
+    position: relative;
+    cursor: pointer;
+
+    &.active {
+      background-image: url($checkedOn);
+    }
+}
+

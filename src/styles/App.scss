@@ -1,0 +1,11 @@
+@import "shared";
+
+.app-container {
+  background-color: $secondaryBackgroundColor;
+  height: 100%;
+  width: 100%;
+  border: 1px solid $secondaryBackgroundColor;
+  box-sizing: border-box;
+  overflow: auto;
+  border-radius: 3px;
+}

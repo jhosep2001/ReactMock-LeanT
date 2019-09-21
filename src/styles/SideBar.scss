@@ -1,0 +1,142 @@
+@import "shared";
+
+.sideBar-container {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 15px;
+  width: $sideBarWidth;
+  height: calc(100% - #{$logoHeight + $mainMargin});
+  border-right: 1px solid $grayColor;
+}
+
+.text-filters {
+  padding-left: 30px;
+  box-sizing: border-box;
+  height: 70px;
+  line-height: 70px;
+  background-image: url($ideaOff);
+  background-size: 25px 25px;
+  background-position: 50px center;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-size: 1.4em;
+  color: $grayColor;
+  border-bottom: 1px solid $grayColor;
+
+  &.active {
+    background-image: url($ideaOn);
+  }
+
+  &::after {
+    content: $filtersText;
+  }
+}
+
+.filters-container {
+  margin-bottom: 20px;
+  border-bottom: 1px solid $grayColor;
+}
+
+.filters-container ul li {
+  height: 90px;
+  text-align: right;
+  background-size: 90px 90px;
+  background-repeat: no-repeat;
+  background-position: 20%;
+  margin: 20px 0;
+
+  &.sales {
+    background-image: url($saleOff);
+
+    &.active {
+      background-image: url($saleOn);
+    }
+  }
+
+  &.calendar {
+    background-image: url($calendarOff);
+
+    &.active {
+      background-image: url($calendarOn);
+    }
+  }
+
+  &.heart {
+    background-image: url($heartOff);
+
+    &.active {
+      background-image: url($heartOn);
+    }
+  }
+
+  /*Modified materialize switch properties for better size*/
+
+  .switch {
+    height: 100%;
+    line-height: 80px;
+  }
+
+  .switch label {
+    font-size: 2em;
+
+    .lever {
+      width: 95px;
+      height: 50px;
+      border-radius: 30px;
+      background-color: $darkBlueColor;
+
+      &:before, &:after {
+        width: 60px;
+        height: 60px;
+        background-color: $whiteColor;
+      }
+    }
+
+    input[type=checkbox] {
+
+      &:checked + .lever {
+        background-color: lighten($darkBlueColor, 20%);
+
+        &:before, &:after {
+          left: 50px;
+          background-color: $whiteColor;
+        }
+      }
+    }
+
+  }
+}
+
+.text-status {
+  font-size: 1.5em;
+  text-align: center;
+  color: $grayColor;
+  margin-bottom: 30px;
+
+  &::after {
+    content: $statusText;
+  }
+
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+button:focus {
+  background-color: $whiteColor !important;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.deliver-btn {
+  width: 100%;
+  height: 60px;
+  text-transform: uppercase;
+
+  &::after {
+    content: $deliveredText;
+  }
+}
